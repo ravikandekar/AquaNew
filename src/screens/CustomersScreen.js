@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   listContainer: {
-    paddingBottom: hp(2),
+    paddingBottom: hp(10),
   },
 });
 

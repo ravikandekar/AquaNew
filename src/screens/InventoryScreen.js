@@ -12,7 +12,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {colors} from '../styles/colors';
 import {mockStockData} from '../data/mockData';
 import {format} from 'date-fns';
-
+import {wp, hp, fs, sp} from '../utils/responsive';     
 const InventoryScreen = ({navigation}) => {
   const [stockData, setStockData] = useState(mockStockData);
 
@@ -54,7 +54,10 @@ const InventoryScreen = ({navigation}) => {
         <Text style={styles.headerSubtitle}>Manage your stock</Text>
       </LinearGradient>
 
-      <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
+      <ScrollView 
+        style={styles.content} 
+        contentContainerStyle={styles.contentContainer}
+        showsVerticalScrollIndicator={false}>
         <View style={styles.totalInventoryCard}>
           <View style={styles.totalInventoryHeader}>
             <View>
@@ -162,7 +165,9 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    marginTop: -20,
+  },
+  contentContainer: {
+    paddingBottom: hp(10),
   },
   totalInventoryCard: {
     backgroundColor: colors.white,

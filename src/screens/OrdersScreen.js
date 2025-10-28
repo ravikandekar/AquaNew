@@ -321,7 +321,7 @@ const styles = StyleSheet.create({
     marginLeft: wp(2),
   },
   listContainer: {
-    paddingBottom: hp(10),
+    paddingBottom: hp(12),
   },
   orderCard: {
     backgroundColor: colors.white,
