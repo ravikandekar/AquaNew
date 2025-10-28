@@ -205,11 +205,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.background,
+   
   },
   header: {
     paddingTop: 40,
     paddingBottom: 24,
     paddingHorizontal: 20,
+    
   },
   headerTop: {
     flexDirection: 'row',
@@ -297,6 +299,8 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     paddingHorizontal: 8,
     paddingTop: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   section: {
     marginTop: 24,
