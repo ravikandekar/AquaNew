@@ -288,6 +288,7 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
+    
   },
   statsGrid: {
     flexDirection: 'row',
@@ -311,7 +312,7 @@ const styles = StyleSheet.create({
   financialSection: {
     marginTop: 24,
     paddingHorizontal: 16,
-    marginBottom: 24,
+    marginBottom: 90,
   },
   financialCard: {
     backgroundColor: colors.white,

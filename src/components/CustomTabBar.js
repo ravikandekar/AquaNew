@@ -18,11 +18,11 @@ const CustomTabBar = ({state, descriptors, navigation}) => {
     <View style={styles.container}>
       <View style={styles.tabBarBackground}>
         {/* Curved notch for center button */}
-        <View style={styles.notchContainer}>
+        {/* <View style={styles.notchContainer}>
           <View style={styles.notchLeft} />
           <View style={styles.notch} />
           <View style={styles.notchRight} />
-        </View>
+        </View> */}
 
         {/* Tab buttons */}
         <View style={styles.tabsContainer}>
@@ -129,8 +129,8 @@ const CustomTabBar = ({state, descriptors, navigation}) => {
                 onPress={onPress}
                 style={styles.tab}>
                 {isFocused ? (
-                  <View style={styles.iconContainerFocused}>
-                    <Icon name={iconFocused} size={sp(24)} color={colors.primary} />
+                  <View style={styles.iconContainer}>
+                    <Icon name={iconFocused} size={sp(28)} color={colors.primary} />
                   </View>
                 ) : (
                   <View style={styles.iconContainer}>
@@ -142,7 +142,7 @@ const CustomTabBar = ({state, descriptors, navigation}) => {
                     styles.label,
                     {
                       color: isFocused ? colors.primary : colors.textLight,
-                      fontWeight: isFocused ? '700' : '600',
+                      fontWeight: isFocused ? '800' : '600',
                     },
                   ]}>
                   {label}
@@ -226,7 +226,7 @@ const styles = StyleSheet.create({
     marginBottom: hp(0.4),
   },
   label: {
-    fontSize: sp(9.5),
+    fontSize: sp(10),
     fontWeight: '600',
     marginTop: hp(0.1),
   },
