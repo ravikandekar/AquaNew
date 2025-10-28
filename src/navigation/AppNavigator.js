@@ -21,6 +21,7 @@ import SettingsScreen from '../screens/SettingsScreen';
 import SubscriptionScreen from '../screens/SubscriptionScreen';
 import PrivacyPolicyScreen from '../screens/PrivacyPolicyScreen';
 import TermsConditionsScreen from '../screens/TermsConditionsScreen';
+import NotificationScreen from '../screens/NotificationScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -98,6 +99,10 @@ const AppNavigator = () => {
         <Stack.Screen
           name="TermsConditions"
           component={TermsConditionsScreen}
+        />
+        <Stack.Screen
+          name="Notifications"
+          component={NotificationScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

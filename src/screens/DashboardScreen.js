@@ -45,7 +45,9 @@ const DashboardScreen = ({navigation}) => {
             <Text style={styles.headerSubtitle}>Water Delivery Manager</Text>
           </View>
           <View style={styles.headerActions}>
-            <TouchableOpacity style={styles.notificationButton}>
+            <TouchableOpacity 
+              style={styles.notificationButton}
+              onPress={() => navigation.navigate('Notifications')}>
               <Icon name="bell" size={24} color={colors.white} />
               <View style={styles.notificationBadge}>
                 <Text style={styles.notificationBadgeText}>3</Text>

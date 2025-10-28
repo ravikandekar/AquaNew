@@ -74,7 +74,7 @@ const SettingsScreen = ({navigation}) => {
           icon="bell-outline"
           title="Notifications"
           subtitle="Order alerts & reminders"
-          onPress={() => Alert.alert('Coming Soon', 'Notification settings coming soon')}
+          onPress={() => navigation.navigate('Notifications')}
         />
       </View>
 
