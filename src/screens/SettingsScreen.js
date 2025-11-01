@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Alert,
 } from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {colors} from '../styles/colors';
 import {clearUserSession} from '../utils/storage';
@@ -47,7 +48,8 @@ const SettingsScreen = ({navigation}) => {
   );
 
   return (
-    <ScrollView style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['top']}>
+      <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Settings</Text>
       </View>
@@ -130,7 +132,8 @@ const SettingsScreen = ({navigation}) => {
       <Text style={styles.footer}>
         Made with ❤️ for Water Distributors
       </Text>
-    </ScrollView>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 

@@ -8,6 +8,7 @@ import {
   ScrollView,
   Alert,
 } from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {colors} from '../styles/colors';
 import {getCustomersData, saveCustomersData} from '../utils/storage';
@@ -51,7 +52,8 @@ const AddCustomerScreen = ({navigation}) => {
   };
 
   return (
-    <ScrollView style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['top']}>
+      <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Icon name="arrow-left" size={24} color={colors.text} />
@@ -120,7 +122,8 @@ const AddCustomerScreen = ({navigation}) => {
           <Text style={styles.saveButtonText}>Add Customer</Text>
         </TouchableOpacity>
       </View>
-    </ScrollView>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 

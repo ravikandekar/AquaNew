@@ -22,6 +22,8 @@ import SubscriptionScreen from '../screens/SubscriptionScreen';
 import PrivacyPolicyScreen from '../screens/PrivacyPolicyScreen';
 import TermsConditionsScreen from '../screens/TermsConditionsScreen';
 import NotificationScreen from '../screens/NotificationScreen';
+import AddStockScreen from '../screens/AddStockScreen';
+import RecordReturnScreen from '../screens/RecordReturnScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -103,6 +105,20 @@ const AppNavigator = () => {
         <Stack.Screen
           name="Notifications"
           component={NotificationScreen}
+        />
+        <Stack.Screen
+          name="AddStock"
+          component={AddStockScreen}
+          options={{
+            presentation: 'modal',
+          }}
+        />
+        <Stack.Screen
+          name="RecordReturn"
+          component={RecordReturnScreen}
+          options={{
+            presentation: 'modal',
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
